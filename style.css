@@ -1,0 +1,302 @@
+body {
+    margin: 14px;
+    padding: 0;
+}
+#main {
+    flex: 2;
+}
+#icon1 {
+    position: absolute;
+    right: 20px;
+    top: 24px;
+}
+#w {
+    display: flex;
+}
+#menu {
+    position: relative;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 65%; /* Set the width to 50% to make it half of the screen */
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Add scrolling if content exceeds the height */
+    transform: translatex(100%); /* Start off-screen initially */
+    transition: transform 0.3s ease-in-out; /* Smooth animation for sliding in/out */
+    z-index: 1000;
+}
+#menu.open {
+    transform: translateX(0); /* Slide the menu into view when opened */
+}
+#close2 a {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+    margin: 20px;
+}
+#close2 a:hover {
+    color: orange;
+    cursor: pointer;
+}
+#close {
+    position: absolute;
+    right: 20px;
+    top: 24px;
+}
+#close a:hover {
+    cursor: pointer;
+}
+#close2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+}
+#upper {
+    position: relative;
+}
+h1 {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+    font-weight: 800;
+    font-size: 36px;
+}
+#mobile {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    width: 100%;
+}
+#firsth1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    line-height: 1;
+}
+#paragraph1 {
+ color: hsl(231, 4%, 65%);
+ line-height: 1.4;
+}
+p {
+    font-size: 15px;
+}
+#read {
+    background-color: rgb(255, 94, 0);
+    color: white;
+    border: none;
+    padding: 14px;
+    width: 55%;
+}
+#new {
+    font-family: 'Inter', sans-serif;
+    color:  hsl(35, 77%, 62%);
+    font-weight: 700;
+    margin-top: 8px;
+}
+#right {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    background-color: hsl(240, 100%, 5%);
+}
+#firstbox, #secondbox, #thirdbox {
+    padding: 10px;
+    margin: auto 10px;
+}
+hr {
+    width: 100%;
+    background-color: hsla(233, 8%, 79%, 0.274);
+    border-radius: 5px;
+}
+.boxh {
+    margin-top: 8px;
+    margin-bottom: -8px;
+    color: white;
+}
+.boxtext {
+    color: hsla(233, 8%, 79%, 0.705);
+    line-height: 1.4;
+}
+.numbers {
+    color: hsl(233, 8%, 79%);
+    font-weight: 800;
+    font-size: 28px;
+    margin-bottom: -12px;
+}
+.lowerh {
+    font-family: 'Inter', sans-serif;
+    color: hsl(240, 100%, 5%);
+    font-weight: 800;
+}
+.lowerp {
+    margin-top: -12px;
+    line-height: 1.4;
+    color: hsl(240, 4%, 69%);
+}
+#lowerbox1, #leftimg1, #lowerbox2, #leftimg2 , #lowerbox3, #leftimg3 {
+    display: flex;
+}
+#lowerbox2 {
+    position: relative;
+    top: -10px;
+}
+#leftimg1, #leftimg2, #leftimg3{
+    margin-right: 10px;
+}
+#rightimg1 {
+    position: relative;
+    top: -10px;
+}
+#rightimg2 {
+    position: relative;
+    left: -14px;
+}
+#rightimg3 {
+    position: relative;
+    top: -10px;
+}
+.lowerimg {
+    margin-top: 16px;
+    width: 100%;
+    height: 80%;
+}
+#lowerimg2 {
+    margin-top: 22px;
+    height: 80%;
+    width: 85%;
+}
+#lowerimg3 {
+    width: 95%;
+}
+#desktop {
+    display: none;
+}
+#close2-desktop {
+    display: none;
+}
+
+@media (min-width: 375px) {
+    #main {
+        display: flex;
+        flex-direction: column;
+        min-width: 800px;
+    }
+    #upper {
+        display: flex;
+        margin-bottom: 22px;
+    }
+    #w {
+        display: flex;
+        flex-direction: row;
+    }
+    #upper-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        margin-right: 20px;
+    }
+    #left {
+        display: flex;
+    }
+    #left-1 {
+        display: flex;
+        flex-basis: 50%;
+    }
+    #left-2 {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
+    }
+    #mobile {
+        display: none;
+    }
+    #desktop {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    #read {
+        margin-top: 10px;
+    }
+    #right {
+        display: flex;
+        flex-direction: column;
+    }
+    #middle {
+        display: flex;
+    }
+    #icon1 {
+        display: none;
+    }
+    #close2 {
+        display: flex;
+    }
+    #lowerimg2 {
+        width: 90%;
+    }
+    #lowerimg3 {
+        width: 100%;
+    }
+    #rightimg2 {
+        left: 2px;
+    }
+    #lower {
+        display: flex;
+    }
+    #lowerbox1, #lowerbox2, #lowerbox3 {
+        align-items: center;
+    }
+    #rightimg1, #rightimg2, #rightimg3 {
+        position: flex;
+        margin: 10px;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    .numbers {
+        font-size: 30px;
+    }
+    #branding {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Distribute items evenly along the main axis */
+    }
+    #close2-desktop {
+        display: flex;
+        align-items: center;
+    }
+    #w {
+        display: flex; /* Display as flex container */
+        align-items: center; /* Center vertically within #w */
+    }
+    #close2-desktop a {
+        font-family: 'Inter', sans-serif;
+        font-size: 18px;
+        color: rgba(0, 0, 0, 0.349);
+        text-decoration: none;
+        margin: 20px;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+    #close2-desktop {
+        order: 2; /* Move close2-desktop to the right */
+    }
+    #w {
+        order: 1; /* Keep w on the left */
+    }
+    #close2-desktop a:hover {
+        color: orange;
+        cursor: pointer;
+    }
+  
+    @media (min-width: 580px) {
+        #lowerimg2 {
+            width: 100%;
+        }
+    }
+    @media (min-width: 1100px) {
+        #lower {
+            margin-top: 40px;
+        }
+    }
+}
